@@ -1,8 +1,7 @@
 package com.jstn9;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.InputStream;
 import java.util.*;
 
 import static com.jstn9.GameMenu.printGallows;
@@ -13,11 +12,19 @@ public class GameLogic {
     private final Set<Character> guessedLetters = new HashSet<>();
 
     public GameLogic() {
-        try {
-            words = Files.readAllLines(Path.of("src/main/resources/words.txt"));
+        try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("words.txt")) {
+            if (inputStream != null) {
+                words = new ArrayList<>();
+                Scanner scanner = new Scanner(inputStream);
+                while (scanner.hasNextLine()) {
+                    words.add(scanner.nextLine());
+                }
+            } else {
+                System.out.println("File not found in resources: words.txt");
+                words = new ArrayList<>();
+            }
         } catch (IOException e) {
             System.out.println("Error reading word file: " + e.getMessage());
-            words = new ArrayList<>();
         }
     }
 
