@@ -9,7 +9,7 @@ public class w3resourceTasks {
     public static void main(String[] args) {
 
         System.out.println("Task 1. Calculate average of integers using streams");
-        List<Integer> taskOneList = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+        List<Integer> taskOneList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         System.out.println("taskOneList: " + taskOneList);
         double avg = taskOneList.stream().mapToInt(Integer::intValue).average().orElse(0.0);
         System.out.println("Average of taskOneList: " + avg);
@@ -69,5 +69,6 @@ public class w3resourceTasks {
         System.out.println("Task 8. Find 2nd smallest/largest using streams");
         int smallest = taskSevenList.stream().distinct().sorted().skip(1).findFirst().orElse(0);
         System.out.println("Smallest 2nd number in taskSevenList: " + smallest);
+
     }
 }
