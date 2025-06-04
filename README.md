@@ -7,3 +7,6 @@
 ## OOP/Zoo
 - View animals and their description.
 - It was written to practice abstract classes and interfaces.
+## Stream API
+- A simple example of using Java Stream API in different topics.
+- It was written to practice functional programming in Java.
