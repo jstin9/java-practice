@@ -5,7 +5,7 @@ import com.jstn9.models.User;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class randomTasks {
+public class RandomTasks {
     public static void main(String[] args) {
 
         System.out.println("Task 1. Combining lines into one");
