@@ -7,6 +7,9 @@
 ## OOP/Zoo
 - View animals and their description.
 - It was written to practice abstract classes and interfaces.
+## OOP/Generics
+- A simple example of using Java Generics.
+- It was written to practice generic types in Java.
 ## Stream API
 - A simple example of using Java Stream API in different topics.
 - It was written to practice functional programming in Java.
